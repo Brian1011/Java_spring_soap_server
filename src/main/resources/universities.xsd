@@ -1,6 +1,23 @@
 <xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema" xmlns:tns = "http://localhost:7991/universities"
            targetNamespace = "http://localhost:7991/universities" elementFormDefault = "qualified">
 
+    <!--The original -->
+    <xs:element name="getUniversityRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUniversityResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="university" type="tns:university"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <!--get university by name-->
     <xs:element name="getUniversityByNameRequest">
         <xs:complexType>
