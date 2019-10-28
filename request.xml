@@ -5,5 +5,4 @@
             <gs:name>Strathmore</gs:name>
         </gs:getUniversityRequest>
     </soapenv:Body>
-
 </soapenv:Envelope>
