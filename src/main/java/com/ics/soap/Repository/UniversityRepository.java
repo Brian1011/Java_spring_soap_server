@@ -38,4 +38,8 @@ public class UniversityRepository {
     public University getUniversityByName(String name) {
         return universities.get(name);
     }
+
+    public University getUniversityByLocation(String location){
+        return universities.get(location);
+    }
 }

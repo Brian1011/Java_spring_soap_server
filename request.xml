@@ -4,5 +4,8 @@
         <gs:getUniversityRequest>
             <gs:name>Strathmore</gs:name>
         </gs:getUniversityRequest>
+        <gs:getUniversityByLocationRequest>
+            <gs:location>Juja</gs:location>
+        </gs:getUniversityByLocationRequest>
     </soapenv:Body>
 </soapenv:Envelope>
