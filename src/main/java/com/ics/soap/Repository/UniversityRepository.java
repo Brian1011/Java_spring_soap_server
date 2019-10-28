@@ -42,4 +42,8 @@ public class UniversityRepository {
     public University getUniversityByLocation(String location){
         return universities.get(location);
     }
+
+    public University getAllUniversities(){
+        return null;
+    }
 }
