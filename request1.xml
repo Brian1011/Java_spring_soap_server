@@ -2,7 +2,7 @@
     <soapenv:Header/>
     <soapenv:Body>
         <gs:getUniversityByLocationRequest>
-            <gs:location>Juja</gs:location>
+            <gs:location>Thika</gs:location>
         </gs:getUniversityByLocationRequest>
     </soapenv:Body>
 </soapenv:Envelope>

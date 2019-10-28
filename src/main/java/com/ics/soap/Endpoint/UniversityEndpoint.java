@@ -23,7 +23,7 @@ public class UniversityEndpoint {
     public GetUniversityResponse getUniversity(@RequestPayload GetUniversityRequest request) {
         GetUniversityResponse response = new GetUniversityResponse();
         response.setUniversity(universityRepository.getUniversityByName(request.getName()));
-        System.out.println("University: "+response);
+        System.out.println("University response: "+response.getUniversity());
         return response;
     }
 
@@ -32,8 +32,19 @@ public class UniversityEndpoint {
     public GetUniversityByLocationResponse getUniversityByLocationResponse(@RequestPayload GetUniversityByLocationRequest request){
         GetUniversityByLocationResponse response = new GetUniversityByLocationResponse();
         response.setUniversity(universityRepository.getUniversityByLocation(request.getLocation()));
-        System.out.println("Location: "+response);
+        System.out.println("Location response: "+response.getUniversity());
         return response;
+    }
+
+    @ResponsePayload
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllUniversitiesRequest")
+    public GetAllUniversitiesResponse getAllUniversitiesResponse(@RequestPayload GetAllUniversitiesRequest request){
+        GetAllUniversitiesResponse response = new GetAllUniversitiesResponse();
+        for (University university: universityRepository.getAllUniversities()){
+            response.getUniversity().add(university);
+        }
+        System.out.println("All universities response: "+response);
+       return response;
     }
 
 }

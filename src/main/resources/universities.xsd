@@ -35,7 +35,7 @@
         </xs:complexType>
     </xs:element>
 
-    <!--get university y location-->
+    <!--get university by location-->
     <xs:element name="getUniversityByLocationRequest">
         <xs:complexType>
             <xs:sequence>
@@ -63,6 +63,23 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element maxOccurs="unbounded" name="university" type="tns:university"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--get university by location-->
+    <xs:element name="getUniversityByYearFoundedRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="yearFounded" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUniversityByYearFoundedResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="university" type="tns:university"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
