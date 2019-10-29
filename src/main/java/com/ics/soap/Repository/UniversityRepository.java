@@ -54,9 +54,15 @@ public class UniversityRepository {
     }
 
     // get by year founded
+    /*
     public List<University> getByYearFounded(String year){
         //return new ArrayList<>(universities.get(year));
         return new ArrayList<>(universities.values());
+    }
+     */
+
+    public University getUniversityByYearFounded(String year){
+        return universities.get(year);
     }
 
     // get a list of university
